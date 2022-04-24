@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       <link rel="shortcut icon" href="https://musestar-cloud.github.io/ms.icon">
+    <link href="./files/style.css" rel="stylesheet" type="text/css">
+<title>MUSESTAR缪斯星</title>
+</head>
+<body>
+<style>
+::-webkit-scrollbar{background:rgba(0,0,0,0.01);height: 6px;width:6px}::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,0.1)}::-webkit-scrollbar-thumb:hover {background:rgba(0,0,0,0.5);}
+::-webkit-scrollbar-track{background: #f0f0f0;border-radius: 10px;}
+::-webkit-scrollbar-thumb{border-radius: 10px;background-color: #c5c5c5;}
+body{font: 14px Arial,\5FAE\8F6F\96C5\9ED1,sans-serif;margin: auto;color: #333;}
+a{text-decoration: none;color: #111;}
+a:hover{color: #FF3311;}
+.n_hd{  height: 30px;padding: 10px;border-bottom: 1px solid #eee;position: fixed;background: rgba(255, 255, 255, .9);z-index: 8;right: 0;left: 0;}
+.n_hd a{-webkit-transition: 0.1s;float: right;border-radius: 3px;}
+.n_hd a:hover{opacity: .7;}
+.user-ico{float: left;min-width: 300px;text-align: left;line-height: 30px;}
+.user-name{color:#ff6740;margin-left: 10px;}
+.user-name-txt{margin-left: 10px;}
+.user-ico-img{width: 30px;height: 30px;border-radius: 50%;position: absolute;}
+.user-ico-div{background: #bbb;width: 30px;height: 25px;border-radius: 50%;padding-top: 5px;float: left;}
+.user-ico-div-1{background: #777;width: 10px;height: 10px;border-radius: 50%;margin: auto;}
+.user-ico-div-2{background: #777;width: 20px;height: 10px;border-radius: 50%;margin: auto;margin-top: 1px;}
+.n_login{background: #ffd1c5;padding: 0px 12px;font-size: 12px;    line-height: 30px;}
+.n_login font{color: #fff;}
+.n_box{width: 593px;margin-right: auto;margin-left: auto;height: auto;padding-top: 150px;}
+.n_box_ico{border-radius: 10px;width: 100px;height: 100px;margin: auto;}
+.n_box_ico img{border-radius: 20px;    width: 100%;}
+.n_file_info{text-align: center;color: #888;    padding-bottom: 30px;}
+.n_file_infos{margin-left: 10px;}
+.n_box_fn{font-size: 26px;text-align: center;padding: 26px 0px 5px 0px;}
+.n_box_2fn{font-size: 26px;text-align: center;padding: 26px 0px 5px 0px;}
+.n_box_des{padding: 30px 0;margin: auto;line-height: 30px;min-height: 100px;font-size: 16px;}
+.n_box_3fn{font-size: 26px;text-align: center;padding: 26px 0px 5px 0px;}
+.n_file{background: #e1e7ea;font-size: 12px;width: 200px;border-radius: 50px;height: 40px;line-height: 40px;margin: auto;padding: 0 20px;}
+.n_filesize{position: absolute;}
+.n_downlink{position: absolute;height: 34px;width: 300px;margin-top: 4px;z-index: 9;}
+.n_bot{background: #f7f7f7;text-align: center;padding: 50px;}
+#code{margin: auto;width: 190px;margin-top: 30px;}
+.n_foot{font-size: 12px;color: #999;padding: 20px;text-align: center;background: #f7f7f7;}
+.n_copy{}
+#downajax{text-align: center;float: right;padding: 5px 0;}
+#downajax a{background: #0af;box-shadow: 0 1px 1px rgba(0,0,0,.15);color: #fff;text-decoration: none;display: block;width: 50px;text-align: center;border-radius: 50px;font-size: 14px;height: 30px;line-height: 30px;}
+#downajax a:hover{background: #0377ff;}
+#downajax a:active{box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.25);}
+#passwddiv{position: fixed;background: #fff;background: rgba(255, 255, 255, .96);width: 100%;height: 100%;top: 0;bottom: 0;z-index: 99;}
+.passwddiv-center{width: 300px;height: 300px;position: absolute;bottom: 50%;margin-bottom: -100px;left: 50%;margin-left: -150px;}
+.passwddiv-userico{margin: auto;width: 90px;}
+.passwddiv-userico-img{width: 90px;height: 90px;border-radius: 50%;position: absolute;}
+.passwddiv-userico-0{background: #e9edef;width: 90px;height: 75px;border-radius: 50%;padding-top: 15px;}
+.passwddiv-userico-1{background: #fff;width: 30px;height: 30px;border-radius: 50%;margin: auto;}
+.passwddiv-userico-2{background: #fff;width: 59px;height: 26px;border-radius: 50%;margin: auto;margin-top: 3px;}
+.passwddiv-user{text-align: center;margin-top: 20px;}
+.passwddiv-user span{color: #000000;padding: 0 5px;}
+.passwddiv-input{width: 200px;margin: auto;padding:10px;border-radius:5px;margin-top: 20px;background: #e9edef;}
+.passwddiv-input:hover{background: #e1e7ea;}
+.passwdinput{font-size: 14px;border: 0;background: #e9edef;background: #ffffff\9;line-height: 30px;height: 30px;outline: 0;padding: 0;text-indent: 5px;width: 160px;}
+.passwdinput:focus{background: #e1e7ea;}
+.passwddiv-btn{width: 30px;height: 30px;background: #0af;box-shadow: 0 1px 1px rgba(0,0,0,.15);border-radius: 50%;float: right;cursor: pointer;}
+.passwddiv-btn:hover{background: #0377ff;}
+.passwddiv-btn:active{box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.25);}
+.passwddiv-btn-1{border-bottom: 1px solid #fff;width: 15px;margin-top: 14px;margin-left: 6px;}
+.passwddiv-btn-2{border-bottom: 1px solid #fff;border-right: 1px solid #fff;width: 10px;height: 10px;transform: rotate(-45deg);margin-top: -6px;margin-left: 8px;}
+#info{text-align:center;padding-top: 10px;}
+.n_box_des{display:none}
+.filter{filter: blur(5px);}
+</style>
+<div id="file" class="">
+<div class="n_box">
+<div class="n_box_ico"><span class="filename"><img src="./files/zip.gif"></span></div>
+<!--<div class="n_box_2fn"></div> -->
+<div class="n_box_3fn" id="filenajax">MUSESTAR PCL2.zip</div>
+<!--<div class="n_file_info"></div> -->
+<div class="n_file_info"><span class="n_file_infos">压缩文件</span></div>
+<div class="n_file_info"><span class="n_file_infos">下载后解压在程序安装目录下，将Plain Craft Launcher 2.exe创建快捷方式放在桌面即可</span></div>
+<div class="n_file"><div class="n_filesize">大小：13.5 M</div><div id="downajax"><a href="https://developer.lanzoug.com/file/?BGJXaVloADECCwszCz4CbltkVGwFFwJVVgJbGFxTA1YBQAEECHUHA1JHChABZ1J9VnZUOFJ9UHRQMVI9BTUEYARbV2lZYABpAmILawtoAjFbNFRkBW4CN1Z3WztccwM/ATABYghkB2FSPApkAWNSa1YqVCFSfVBvUGVSZAVrBDcEK1cwWTAAewJkC2sLcAIzW2RUZgU5AjhWYltpXDMDNQFgAWcIbAcwUmAKOQExUmtWNFQzUjtQZ1BhUmQFbARhBDVXZVkyAGYCMQs/C24CLVt7VDgFKgImViRbLlxlA3ABaAEyCGgHYVI0CmkBZ1JmVjVUZlIrUCZQPlI5BTwEYwQ5VzFZMgBhAmQLbAtpAjZbM1RnBWMCLlZ/W3tcZgNuAXYBawhkB2VSMAplAWJSa1Y9VGlSPlBiUHFSIQUpBHIEOVcxWTIAYAJtC28LbgI2WzRUZAVqAiZWJFs0XHADPwEzAWEIewdhUjUKaAF7UmJWOVRnUiNQYFBn" target="_blank" rel="noreferrer">下载</a></div></div>
+<div class="n_box_des" style="display: block;"></div>
+</div>
+</div>
+    <div class="foot">
+        <div class="footbg">
+           <p>Copyright © 2014-2022 <a href=" https://musestar-cloud.gitHub.io">MUSESTAR</a> All Rights Reserved</p>
+<a href="https://icp.gov.moe/?keyword=20220574" target="_blank">萌ICP备20220574号</a>
+</body></html>

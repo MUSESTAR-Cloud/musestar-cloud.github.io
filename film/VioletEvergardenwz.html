@@ -1,0 +1,67 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <meta charset="UTF-8">  
+        <title>永远与自动手记人偶-缪斯星动漫</title> 
+	      <link href="https://MUSESTAR-Cloud.github.io/animation/files/style.css" rel="stylesheet" type="text/css">
+	        <link rel="shortcut icon" href="https://musestar-cloud.github.io/ms.icon">
+<script type="text/javascript" src="https://MUSESTAR-Cloud.github.io/animation/files/history.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script><!-- hls.js必须引入，可下载至本地 -->
+        <style type="text/css">  
+           
+        </style>  
+    </head>  
+    <body>  
+        <div>  
+	<video id="video" width='auto' height="400" controls></video>
+        </div>  
+    </body>  
+  <script type="text/javascript">
+	//播放地址
+	var hlsUrl="https://yun.66dm.net/SBDM/VioletEvergardenSideStory.m3u8";//需要替换为自己的视频流地址
+
+	//播放视频流 
+        function loadVideo(){
+	var video = document.getElementById('video');//获取 video 标签
+	if(Hls.isSupported()) {
+	var hls = new Hls();//实例化 Hls 对象
+	hls.loadSource(hlsUrl);//传入路径
+	hls.attachMedia(video);
+	hls.on(Hls.Events.MANIFEST_PARSED,function() {
+		   video.play();//调用播放 API
+		});
+	} else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+	          video.src = hlsUrl;
+	          video.addEventListener('loadedmetadata',function() {
+	              video.play();
+	          });
+	      }
+    }
+		
+  //方法调用
+  loadVideo();
+  </script>
+<p>缪斯星动漫（网站持续完善中）</p>
+<p>永远与自动手记人偶</p>
+<p>上映时间: 2019-09-06</p>
+<div class="blank5"></div>
+        </div>
+ <div class="blank"></div>
+        <div class="botit">
+          <h2>动漫介绍</h2></div>
+        <div class="info">以晓佳奈的人气轻小说为原作的京都动画制作的TV动画《紫罗兰房屋花园》的外传作品。没有感情的原军人少女小提琴手，通过代笔写信的“自动手记人偶”的工作，面对各种各样的人的想法，了解爱的意义的身姿纤细的映像表现的幻想群像剧。本作品描写了与对生活绝望的新委托人少女伊莎贝拉的故事。导演是在TV系列中担任系列导演的藤田春香。2019年9月限定上映3周。 ……作为守护重要之物的交换，我卖掉了我的未来。 仅允许良家子女就读的女学园。 对于与父亲交换了「契约」的伊莎贝拉·约克而言， 这个绽放着白色山茶花的美丽地方，简直就是牢狱……。 伊莎贝拉失去了对未来的希望以及期待，此时在她面前出现的是 被雇来当教育员的薇尔莉特·伊芙加登。</div>
+      </div>
+ <div class="blank"></div>
+        <div class="botit">
+          <h2>温馨提示</h2></div>
+        <div class="info">请不要相信视频内的任何广告</div>
+        <div class="info">部分浏览器需手动开始播放视频</div>
+      </div>
+         </div>
+<br>
+    <div class="foot">
+        <div class="footbg">
+           <p>Copyright © 2014-2022 <a href=" https://musestar-cloud.gitHub.io">MUSESTAR</a> All Rights Reserved</p>
+<a href="https://icp.gov.moe/?keyword=20220574" target="_blank">萌ICP备20220574号</a>
+</body>
+</html>

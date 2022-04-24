@@ -1,0 +1,67 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <meta charset="UTF-8">  
+        <title>这个杀手不太冷静-缪斯星影视</title> 
+	      <link href="https://MUSESTAR-Cloud.github.io/animation/files/style.css" rel="stylesheet" type="text/css">
+	        <link rel="shortcut icon" href="https://musestar-cloud.github.io/ms.icon">
+<script type="text/javascript" src="https://MUSESTAR-Cloud.github.io/animation/files/history.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script><!-- hls.js必须引入，可下载至本地 -->
+        <style type="text/css">  
+           
+        </style>  
+    </head>  
+    <body>  
+        <div>  
+	<video id="video" width='auto' height="400" controls></video>
+        </div>  
+    </body>  
+  <script type="text/javascript">
+	//播放地址
+	var hlsUrl="https://qq.sd-play.com/20220401/de4W5oUA/index.m3u8";//需要替换为自己的视频流地址
+
+	//播放视频流 
+        function loadVideo(){
+	var video = document.getElementById('video');//获取 video 标签
+	if(Hls.isSupported()) {
+	var hls = new Hls();//实例化 Hls 对象
+	hls.loadSource(hlsUrl);//传入路径
+	hls.attachMedia(video);
+	hls.on(Hls.Events.MANIFEST_PARSED,function() {
+		   video.play();//调用播放 API
+		});
+	} else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+	          video.src = hlsUrl;
+	          video.addEventListener('loadedmetadata',function() {
+	              video.play();
+	          });
+	      }
+    }
+		
+  //方法调用
+  loadVideo();
+  </script>
+<p>缪斯星影视（网站持续完善中）</p>
+<p>这个杀手不太冷静</p>
+<p>上映时间: 2022-02-01</p>
+<div class="blank5"></div>
+        </div>
+ <div class="blank"></div>
+        <div class="botit">
+          <h2>电影介绍</h2></div>
+        <div class="info">米兰的弟弟米勒（黄才伦 饰）是一名电影导演，黑帮大佬哈维（陈明昊 饰）给他的电影投资了不菲的资金，哪知道亏得底裤都不剩，哈维一直爱慕着米兰，想要娶她为妻，可是米兰誓死不从。这一天，当哈维决定和姐弟两算总账之际，米兰告诉哈维自己认识他一直想要寻找的杀手卡尔（艾伦 饰）。哈维给了米兰一天的时间，让他把卡尔带到自己面前，实际上并不认识卡尔的米兰决定让魏成功来扮演这位冷酷的杀手。</div>
+      </div>
+ <div class="blank"></div>
+        <div class="botit">
+          <h2>温馨提示</h2></div>
+        <div class="info">请不要相信视频内的任何广告</div>
+        <div class="info">部分浏览器需手动开始播放视频</div>
+      </div>
+         </div>
+<br>
+    <div class="foot">
+        <div class="footbg">
+<p>Copyright © 2014-2022 <a href=" https://musestar-cloud.gitHub.io">MUSESTAR</a> All Rights Reserved</p>
+<a href="https://icp.gov.moe/?keyword=20220574" target="_blank">萌ICP备20220574号</a>
+</body>
+</html>
