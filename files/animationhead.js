@@ -10,6 +10,4 @@ document.write("			<li>");
 document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/movie.html\">影视专区<\/a><\/li>");
 document.write("			<li>");
 document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/app.html\">软件专区<\/a><\/li>");
-document.write("			<li>");
-document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/r18.html\">R18专区<\/a><\/li>");
 document.write("	<\/div>");
