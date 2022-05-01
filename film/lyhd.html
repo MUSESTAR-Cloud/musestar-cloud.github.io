@@ -1,0 +1,59 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <meta charset="UTF-8">  
+        <title>铃芽户缔-缪斯星动漫</title> 
+	      <link href="https://MUSESTAR-Cloud.github.io/animation/files/style.css" rel="stylesheet" type="text/css">
+	        <link rel="shortcut icon" href="https://musestar-cloud.github.io/ms.icon">
+<script type="text/javascript" src="https://MUSESTAR-Cloud.github.io/animation/files/history.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script><!-- hls.js必须引入，可下载至本地 -->
+        <style type="text/css">  
+           
+        </style>  
+    </head>  
+    <body>  
+    <script type="text/javascript" src="https://musestar-cloud.github.io/files/animationhead.js"></script>
+        <div>  
+	<video id="video" width='auto' height="400" controls></video>
+        </div>  
+    </body>  
+  <script type="text/javascript">
+	//播放地址
+	var hlsUrl=" ";//需要替换为自己的视频流地址
+
+	//播放视频流 
+        function loadVideo(){
+	var video = document.getElementById('video');//获取 video 标签
+	if(Hls.isSupported()) {
+	var hls = new Hls();//实例化 Hls 对象
+	hls.loadSource(hlsUrl);//传入路径
+	hls.attachMedia(video);
+	hls.on(Hls.Events.MANIFEST_PARSED,function() {
+		   video.play();//调用播放 API
+		});
+	} else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+	          video.src = hlsUrl;
+	          video.addEventListener('loadedmetadata',function() {
+	              video.play();
+	          });
+	      }
+    }
+		
+  //方法调用
+  loadVideo();
+  </script>
+<p>缪斯星动漫（网站持续完善中）</p>
+<p>铃芽户缔</p>
+<p>上映时间: 2022-11-11</p>
+<div class="blank5"></div>
+        </div>
+ <div class="blank"></div>
+        <div class="botit">
+          <h2>动漫介绍</h2></div>
+        <div class="info">生活在日本九州田舍的17岁少女・铃芽遇见了“为了寻找门”而踏上旅途的青年。追随着青年的脚步，铃芽来到了山上一片废墟之地，在这里静静伫立着一扇古老的门，仿佛是坍塌中存留的唯一遗迹。铃芽仿佛被什么吸引了一般，将手伸向了那扇门…不久之后，日本各地的门开始一扇一扇地打开。据说，开着的门必须关上，否则灾祸将会从门的那一边降临于现世。星星，夕阳，拂晓，误入之境的天空，仿佛溶解了一切的时间。在神秘之门的引导下，铃芽踏上了关门的旅途。</div>
+       <img width='auto' height="500" referrerpolicy="no-referrer" src="https://musestar-cloud.github.io/film/files/lyhd.jpg"></a>
+        <div class="info">《铃芽户缔》</div>
+      </div>
+    <script type="text/javascript" src="https://musestar-cloud.github.io/files/videounder.js"></script>
+</body>
+</html>
