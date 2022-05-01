@@ -1,0 +1,61 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <meta charset="UTF-8">  
+        <title>你的名字-缪斯星动漫</title> 
+<meta name="description" content="影片讲述了男女高中生在梦中相遇，并寻找彼此的故事。">
+<meta name="keywords" content="你的名字,电影,动漫,番剧,在线观看,缪斯星,MUSESTAR,晓天,XOTA">
+	      <link href="https://MUSESTAR-Cloud.github.io/animation/files/style.css" rel="stylesheet" type="text/css">
+	        <link rel="shortcut icon" href="https://musestar-cloud.github.io/ms.icon">
+<script type="text/javascript" src="https://MUSESTAR-Cloud.github.io/animation/files/history.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script><!-- hls.js必须引入，可下载至本地 -->
+        <style type="text/css">  
+           
+        </style>  
+    </head>  
+    <body>  
+    <script type="text/javascript" src="https://musestar-cloud.github.io/files/animationhead.js"></script>
+        <div>  
+	<video id="video" width='auto' height="400" controls></video>
+        </div>  
+    </body>  
+  <script type="text/javascript">
+	//播放地址
+	var hlsUrl="https://cdn.zoubuting.com/20210628/nWwRUqHu/index.m3u8";//需要替换为自己的视频流地址
+
+	//播放视频流 
+        function loadVideo(){
+	var video = document.getElementById('video');//获取 video 标签
+	if(Hls.isSupported()) {
+	var hls = new Hls();//实例化 Hls 对象
+	hls.loadSource(hlsUrl);//传入路径
+	hls.attachMedia(video);
+	hls.on(Hls.Events.MANIFEST_PARSED,function() {
+		   video.play();//调用播放 API
+		});
+	} else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+	          video.src = hlsUrl;
+	          video.addEventListener('loadedmetadata',function() {
+	              video.play();
+	          });
+	      }
+    }
+		
+  //方法调用
+  loadVideo();
+  </script>
+<p>缪斯星动漫（网站持续完善中）</p>
+<p>你的名字</p>
+<p>上映时间: 2016-12-02</p>
+<div class="blank5"></div>
+        </div>
+ <div class="blank"></div>
+        <div class="botit">
+          <h2>动漫介绍</h2></div>
+        <div class="info">影片讲述了男女高中生在梦中相遇，并寻找彼此的故事。</div>
+       <img width='auto' height="500" referrerpolicy="no-referrer" src="https://musestar-cloud.github.io/film/files/YourName.jpg"></a>
+        <div class="info">《你的名字》</div>
+      </div>
+    <script type="text/javascript" src="https://musestar-cloud.github.io/files/videounder.js"></script>
+</body>
+</html>
