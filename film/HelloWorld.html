@@ -1,0 +1,59 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <meta charset="UTF-8">  
+        <title>你好世界-缪斯星动漫</title> 
+	      <link href="https://MUSESTAR-Cloud.github.io/animation/files/style.css" rel="stylesheet" type="text/css">
+	        <link rel="shortcut icon" href="https://musestar-cloud.github.io/ms.icon">
+<script type="text/javascript" src="https://MUSESTAR-Cloud.github.io/animation/files/history.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script><!-- hls.js必须引入，可下载至本地 -->
+        <style type="text/css">  
+           
+        </style>  
+    </head>  
+    <body>  
+    <script type="text/javascript" src="https://musestar-cloud.github.io/files/animationhead.js"></script>
+        <div>  
+	<video id="video" width='auto' height="400" controls></video>
+        </div>  
+    </body>  
+  <script type="text/javascript">
+	//播放地址
+	var hlsUrl="https://www.taopianplay.com/taopian/84e2601a-c8ef-41e9-815a-453247f2e518/b483bd43-c905-4fb9-8d82-541a0d6afc6f/11495/bc95ebd3-0029-48ed-84d6-9e224ddea33d/SD/playlist.m3u8";//需要替换为自己的视频流地址
+
+	//播放视频流 
+        function loadVideo(){
+	var video = document.getElementById('video');//获取 video 标签
+	if(Hls.isSupported()) {
+	var hls = new Hls();//实例化 Hls 对象
+	hls.loadSource(hlsUrl);//传入路径
+	hls.attachMedia(video);
+	hls.on(Hls.Events.MANIFEST_PARSED,function() {
+		   video.play();//调用播放 API
+		});
+	} else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+	          video.src = hlsUrl;
+	          video.addEventListener('loadedmetadata',function() {
+	              video.play();
+	          });
+	      }
+    }
+		
+  //方法调用
+  loadVideo();
+  </script>
+<p>缪斯星动漫（网站持续完善中）</p>
+<p>你好世界</p>
+<p>上映时间: 2021-06-11</p>
+<div class="blank5"></div>
+        </div>
+ <div class="blank"></div>
+        <div class="botit">
+          <h2>动漫介绍</h2></div>
+        <div class="info">2027年住在日本京都市的主人公坚书直实，被从十年后2037年来的未来的自己告知，自己的所住的世界只是真实世界的数据，而未来的自己是来帮他找女朋友的，随后告诉了自己，在与她刚交往没多久的一个烟火大会中，她就遇到事故身亡了，希望过去的自己能回避掉死亡的悲剧，虽然知道无法改变未来，只是希望能看见她的笑容而已。但随着时间过去......一切似乎并非如此。</div>
+       <img width='auto' height="500" referrerpolicy="no-referrer" src="https://musestar-cloud.github.io/film/files/HelloWorld.jpg"></a>
+        <div class="info">《你好世界》</div>
+      </div>
+    <script type="text/javascript" src="https://musestar-cloud.github.io/files/videounder.js"></script>
+</body>
+</html>
