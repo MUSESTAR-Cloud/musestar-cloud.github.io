@@ -11,5 +11,5 @@ document.write("    <div class=\"foot\">");
 document.write("        <div class=\"footbg\">");
 document.write("           <p>Copyright © 2014-2022 <a href=\" https:\/\/musestar-cloud.gitHub.io\">MUSESTAR<\/a> All Rights Reserved<\/p>");
 document.write("<a href=\"https:\/\/icp.gov.moe\/?keyword=20220574\" target=\"_blank\">萌ICP备20220574号<\/a><br>");
-document.write("           <a>QQ群：750813427<\/a>");
+document.write("           <a>缪斯星官方QQ群：750813427<\/a>");
 document.write("");
