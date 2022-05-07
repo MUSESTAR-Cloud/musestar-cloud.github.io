@@ -7,35 +7,10 @@
 	        <link rel="shortcut icon" href="https://musestar-cloud.github.io/ms.icon">
 <script type="text/javascript" src="https://MUSESTAR-Cloud.github.io/animation/files/history.js"></script>
 
-        <div>  
-	<video id="video" width='auto' height="400" controls autoplay></video>
-        </div>  
     </body>  
-  <script type="text/javascript">
-	//播放地址
-	var hlsUrl="https://v26.bdxiguavod.com/5ea240dfb7f7569378b8b8797217d435/62768bf5/video/tos/cn/tos-cn-v-3506/69802ce449dc424eb7f3e9ab55378177/";//需要替换为自己的视频流地址
 
-	//播放视频流 
-        function loadVideo(){
-	var video = document.getElementById('video');//获取 video 标签
-	if(Hls.isSupported()) {
-	var hls = new Hls();//实例化 Hls 对象
-	hls.loadSource(hlsUrl);//传入路径
-	hls.attachMedia(video);
-	hls.on(Hls.Events.MANIFEST_PARSED,function() {
-		   video.play();//调用播放 API
-		});
-	} else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-	          video.src = hlsUrl;
-	          video.addEventListener('loadedmetadata',function() {
-	              video.play();
-	          });
-	      }
-    }
-		
-  //方法调用
-  loadVideo();
-  </script>
+<video src="https://v26.bdxiguavod.com/5ea240dfb7f7569378b8b8797217d435/62768bf5/video/tos/cn/tos-cn-v-3506/69802ce449dc424eb7f3e9ab55378177/" width='auto' height="400" controls autoplay></video>
+
 
 <p>缪斯星动漫（网站持续完善中）</p>
 <p>更衣人偶坠入爱河-第六集</p>
