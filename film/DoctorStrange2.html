@@ -4,8 +4,8 @@
 <!-- Clarity tracking code for https://musestar-cloud.github.io/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "bq49okey7z");</script>
         <meta charset="UTF-8">  
         <title>奇异博士2：疯狂多元宇宙-缪斯星影视</title> 
-<meta name="description" content="故事承接《蜘蛛侠：英雄无归》，奇异博士无意中打开疯狂多元宇宙，事态失控，他去找红巫女旺达帮忙。切瓦特·埃加福特扮演的莫度告诉奇异博士，宇宙最大的威胁其实就是他自己：一个邪恶的奇异博士突然现身。">
-<meta name="keywords" content="奇异博士2：疯狂多元宇宙,电影,番剧,在线观看,缪斯星,MUSESTAR,晓天,XOTA">
+<meta name='description' content='故事承接《蜘蛛侠：英雄无归》，奇异博士无意中打开疯狂多元宇宙，事态失控，他去找红巫女旺达帮忙。切瓦特·埃加福特扮演的莫度告诉奇异博士，宇宙最大的威胁其实就是他自己：一个邪恶的奇异博士突然现身。'>
+<meta name='keywords' content='奇异博士2：疯狂多元宇宙,电影,番剧,在线观看,缪斯星,MUSESTAR,晓天,XOTA'>
 	      <link href="https://MUSESTAR-Cloud.github.io/animation/files/style.css" rel="stylesheet" type="text/css">
 	        <link rel="shortcut icon" href="https://musestar-cloud.github.io/ms.icon">
 <script type="text/javascript" src="https://MUSESTAR-Cloud.github.io/animation/files/history.js"></script>
@@ -16,9 +16,31 @@
     </head>  
     <body>  
     <script type="text/javascript" src="https://musestar-cloud.github.io/files/moviehead.js"></script> 
+  <script type="text/javascript">
+	//播放地址
+	var hlsUrl="https://new.iskcd.com/20220505/JosghvPA/index.m3u8";//需要替换为自己的视频流地址
 
-<video src="https://musestar-cloud.github.io/files/DoctorStrange2.mp4" width='auto' height="400" controls autoplay></video>
-
+	//播放视频流 
+        function loadVideo(){
+	var video = document.getElementById('video');//获取 video 标签
+	if(Hls.isSupported()) {
+	var hls = new Hls();//实例化 Hls 对象
+	hls.loadSource(hlsUrl);//传入路径
+	hls.attachMedia(video);
+	hls.on(Hls.Events.MANIFEST_PARSED,function() {
+		   video.play();//调用播放 API
+		});
+	} else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+	          video.src = hlsUrl;
+	          video.addEventListener('loadedmetadata',function() {
+	              video.play();
+	          });
+	      }
+    }
+		
+  //方法调用
+  loadVideo();
+  </script>
 <p>缪斯星影视（网站持续完善中）</p>
 <p>奇异博士2：疯狂多元宇宙</p>
 <p>上映时间: 2022-05-06</p>
