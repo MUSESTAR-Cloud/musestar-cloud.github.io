@@ -16,3 +16,6 @@ document.write("            <\/li>");
 document.write("           <li>");
 document.write("               <a href=\"https:\/\/musestar-cloud.github.io\/teleplay\/moonknight\/06.html\" title=\"第6集\" target=\"_self\">第6集<\/a>");
 document.write("            <\/li>");
+document.write("           <li>");
+document.write("               <a href=\"https:\/\/musestar-cloud.github.io\/teleplay\/moonknight\/07.html\" title=\"第7集\" target=\"_self\">第7集<\/a>");
+document.write("            <\/li>");
