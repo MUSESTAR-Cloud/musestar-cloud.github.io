@@ -7,7 +7,7 @@ document.write("    <\/div>");
 document.write("	<div class=\"tlist\">");
 document.write("<li>");
 document.write("                <span>");
-document.write("                    <a>5.15<\/a><\/span>");
+document.write("                    <a>5-15<\/a><\/span>");
 document.write("                <a>生草支持了1.52元<\/a>");
 document.write("            <\/li>");
 document.write("<\/div>      ");
