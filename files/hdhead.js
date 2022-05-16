@@ -1,10 +1,10 @@
 document.write("<style> ");
 document.write(" body {");
-document.write("   background:url(\"https:\/\/api.dujin.org\/bing\/1920.php\")  no-repeat center center;");
+document.write("   background:url(\"https:\/\/\")  no-repeat center center;");
 document.write("   background-size:cover;");
 document.write("   background-attachment:fixed;");
 document.write("   background-color:#CCCCCC;");
 document.write(" }");
 document.write("<\/style>");
-document.write("<script src=\"https:\/\/cdn.jsdelivr.net\/gh\/wallleap\/cdn@latest\/js\/sakura.js\"><\/script>");
+document.write("<script src=\"https:\/\/cdn.jsdelivr.net\/gh\/wallleap\/cdn@latest\/js\/sakura.j\"><\/script>");
 document.write("");
