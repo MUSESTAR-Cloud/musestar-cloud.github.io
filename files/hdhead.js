@@ -1,6 +1,6 @@
 document.write("<style> ");
 document.write(" body {");
-document.write("   background:url(\"https:\/\/musestar-cloud.github.io\/files\/520.jpg\")  no-repeat center center;");
+document.write("   background:url(\"https:\/\/api.dujin.org\/bing\/1920.php\")  no-repeat center center;");
 document.write("   background-size:cover;");
 document.write("   background-attachment:fixed;");
 document.write("   background-color:#CCCCCC;");
