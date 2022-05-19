@@ -8,7 +8,7 @@ document.write("	<div class=\"tlist\">");
 document.write("<li>");
 document.write("                <span>");
 document.write("                    <a>5-20<\/a><\/span>");
-document.write("                <a>小黑蛋支持了8.5元<\/a>");
+document.write("                <a>留白支持了8.5元<\/a>");
 document.write("            <\/li>");
 document.write("<li>");
 document.write("                <span>");
