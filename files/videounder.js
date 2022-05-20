@@ -14,3 +14,5 @@ document.write("<a href=\"https:\/\/icp.gov.moe\/?keyword=20220574\" target=\"_b
 document.write("<a href=\"https:\/\/afdian.net\/@musestarxota\" target=\"_blank\">爱发电<\/a>");
 document.write("		<br>");
 document.write("           <a>缪斯星官方QQ群：750813427<\/a>");
+document.write("		<br>");
+document.write("           <a>MSv1.13.0<\/a>");
