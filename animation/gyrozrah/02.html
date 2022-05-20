@@ -6,11 +6,37 @@
 	      <link href="https://MUSESTAR-Cloud.github.io/animation/files/style.css" rel="stylesheet" type="text/css">
 	        <link rel="shortcut icon" href="https://musestar-cloud.github.io/ms.ico">
 <script type="text/javascript" src="https://MUSESTAR-Cloud.github.io/animation/files/history.js"></script>
-
+		<script src="https://musestar-cloud.github.io/files/hls.js"></script><!-- hls.js必须引入，可下载至本地 -->
+    <body> 
+       <div>  
+	<video id="video" width='auto' height="400" controls autoplay></video>
+        </div>  
     </body>  
+  <script type="text/javascript">
+	//播放地址
+	var hlsUrl="https://yun.66dm.net/SBDM/SonoBisqueDollwaKoiwoSuru02.m3u8";//需要替换为自己的视频流地址
 
-<video src="https://v9.bdxiguavod.com/d0e961772a0c8e71e61dd5519138b08a/6276839e/video/tos/cn/tos-cn-v-3506/653cf727dbaa4487a42236ad78b5dd64/" width='auto' height="400" controls autoplay></video>
-
+	//播放视频流 
+        function loadVideo(){
+	var video = document.getElementById('video');//获取 video 标签
+	if(Hls.isSupported()) {
+	var hls = new Hls();//实例化 Hls 对象
+	hls.loadSource(hlsUrl);//传入路径
+	hls.attachMedia(video);
+	hls.on(Hls.Events.MANIFEST_PARSED,function() {
+		   video.play();//调用播放 API
+		});
+	} else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+	          video.src = hlsUrl;
+	          video.addEventListener('loadedmetadata',function() {
+	              video.play();
+	          });
+	      }
+    }
+		
+  //方法调用
+  loadVideo();
+  </script>
 <p>缪斯星动漫（网站持续完善中）</p>
 <p>更衣人偶坠入爱河-第二集</p>
 <p>第一季已完结：共12集</p>
