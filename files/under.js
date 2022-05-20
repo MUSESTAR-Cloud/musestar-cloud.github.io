@@ -4,4 +4,4 @@ document.write("<a href=\"https:\/\/afdian.net\/@musestarxota\" target=\"_blank\
 document.write("		<br>");
 document.write("           <a>缪斯星官方QQ群：750813427<\/a>");
 document.write("		<br>");
-document.write("           <a>MSv1.12.5<\/a>");
+document.write("           <a>MSv1.13.0<\/a>");
