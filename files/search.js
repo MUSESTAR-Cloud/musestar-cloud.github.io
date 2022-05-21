@@ -20,7 +20,7 @@ document.write("<\/style>");
 document.write("    <div id=\"box\">");
 document.write("<form class=\"navbar-form navbar-right site-search\" action=\"http:\/\/cn.bing.com\/search\" target=\"_blank\">");
 document.write("  <div class=\"form-group\">");
-document.write("    <input type=\"text\" class=\"form-control\" placeholder=\"搜索\" name=\"q\" value=\"                                                                                                    site:musestar-cloud.github.io\">");
+document.write("    <input type=\"text\" class=\"form-control\" placeholder=\"搜索\" name=\"q\" value=\"                                                                                                                                                      site:musestar-cloud.github.io\">");
 document.write("  <\/div>");
 document.write("<button type=\"submit\" class=\"btn btn-default\">搜索<\/button><\/form>");
 document.write("    <\/div>");
