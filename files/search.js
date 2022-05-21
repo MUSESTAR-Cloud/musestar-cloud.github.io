@@ -18,7 +18,7 @@ document.write("        padding:0 0 0 40px;");
 document.write("    }");
 document.write("<\/style>");
 document.write("    <div id=\"box\">");
-document.write("<form class=\"navbar-form navbar-right site-search\" action=\"http:\/\/cn.bing.com\/search\" target=\"_blank\">");
+document.write("<form class=\"navbar-form navbar-right site-search\" action=\"https:\/\/cn.bing.com\/search\" target=\"_blank\">");
 document.write("  <div class=\"form-group\">");
 document.write("    <input type=\"text\" class=\"form-control\" placeholder=\"搜索\" name=\"q\" value=\"                                                                                                                                                      site:musestar-cloud.github.io\">");
 document.write("  <\/div>");
