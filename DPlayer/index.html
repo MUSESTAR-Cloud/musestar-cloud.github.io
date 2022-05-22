@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title><!-- Write by js -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="DPlayer | 即开即用 | 开源 | 萌新">
+    <meta name="keywords" content="DPlayer,MoChanBW,Ready to use,Packed">
+    <meta name="author" content="MoChanBW">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no">
+    <!-- <base href="https://cdn.jsdelivr.net/gh/MoChanBW/DPlayer-ReadyToUse@latest/"> -->
+    <!-- <script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script> -->
+    <link rel="icon" href="assets/Cloud_Play.svg">
+    <script defer src="https://cdn.jsdelivr.net/npm/flv.js@latest/dist/flv.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/hls.js@latest/dist/hls.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/dash@latest/dist/dash.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/dplayer@latest/dist/DPlayer.min.js"></script>
+    <style>
+        a:link {
+            text-decoration: none;
+        }
+
+        body {
+            font-family: sans-Serif;
+        }
+    </style>
+</head>
+<!--Author: https://github.com/MoChanBW/ -->
+<!--Need Help? https://github.com/MoChanBW/DPlayer-ReadyToUse/ -->
+<!-- Bilibili 直播源示例 -->
+<!-- https://cn-hbxy-cmcc-live-01.live-play.acgvideo.com/live-bvc/live_102999485_4379933.m3u8 -->
+
+<body style="position: relative; border: 0;margin: 0;padding: 0;height: auto;width: 100%;">
+    <div class='container' style="position: relative; width:auto; height:auto; margin:0; padding:0;border:0 ;">
+        <div id="dplayer"></div>
+    </div>
+    <script defer src="assets/js/webMainLogic.js"></script>
+<!--     <script type="application/javascript">
+        function createApiBackend(url, onMessage) {
+            var ws;
+            var connect = function () {
+                ws = new WebSocket(url);
+                ws.onmessage = function (event) {
+                    onMessage(JSON.parse(event.data));
+                };
+                ws.onclose = function () {
+                    // Try to reconnect in 5 seconds
+                    setTimeout(connect, 5000);
+                };
+            };
+            var connected = false;
+            window.addEventListener('beforeunload', function () {
+                ws.onclose = null;
+                ws.close();
+            });
+            return {
+                read: function (options) {
+                    if (connected) {
+                        return;
+                    }
+                    connected = true;
+                    connect();
+                    options.success();
+                },
+                send: function (options) {
+                    ws.send(JSON.stringify(options.data));
+                    options.success();
+                }
+            };
+        }
+    </script> -->
+    <script defer src="assets/js/dplayerMainController.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta name="Noob Codes" content="Just Learnt By Myself For A Few Days From Scratch">
+	<meta name="Thanks" content="w3school.com.cn & Github-(SB)MoChanBW">
+	<meta name="Author" content="Github-Klpy-Shuai">
+	<meta name="Description" content="等待添加">
+	<title>DPlayer-链接自动生成器</title>
+	<script type="text/javascript" src="jquery-3.5.0.min.js"></script>
+	<!--https://cdn.jsdelivr.net/gh/MoChanBW/DPlayer-ReadyToUse@0.0.5/assets/js/jquery.min.js-->
+	<script>
+	//该脚本由Github-MoChanBW (https://github.com/MoChanBW) 友情赞助
+	function base64Encoder(plainString) { //可以用 https://tool.oschina.net/encrypt?type=3  加密
+	  let Base64 = { //from https://www.jianshu.com/p/82afa633033e
+		encode(str) {
+		  // first we use encodeURIComponent to get percent-encoded UTF-8,
+		  // then we convert the percent encodings into raw bytes which
+		  // can be fed into btoa.
+		  return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g,
+			function toSolidBytes(match, p1) {
+			  return String.fromCharCode('0x' + p1);
+			}));
+		},
+		decode(str) {
+		  // Going backwards: from bytestream, to percent-encoding, to original string.
+		  return decodeURIComponent(atob(str).split('').map(function (c) {
+			return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+		  }).join(''));
+		}
+	  };
+
+	  let encoded = Base64.encode(plainString);
+	  //let decoded = Base64.decode(encodedString);
+	  //console.log(encoded.replace(/\=/g, ""));
+	  return encoded.replace(/\=/g, "");
+	}
+  </script>
+</head>
+
+<body>
+  <div class="top">
+	<h1 align="center" style="margin-bottom: 3px;">这是一个自动生成DPlayer链接的网站</h1>
+	<h4 align="center" style="margin-top: 5px;margin-bottom: 5px;">beta v0.1</h4>
+	<h3 align='center' style="margin-top: 15px;margin-bottom: 10px;">目前这个网站仅勉强能用 更完善的版本将在以后推出</h2>
+  </div>
+
+  <div class="main">
+	<p class="feihua" align="center">
+	  项目来源于：
+	  <a href="https://github.com/MoChanBW/DPlayer-ReadyToUse">Github-Mochan</a>
+	</p>
+  </div>
+
+
+  <table align="center" border="0">
+	<thead style="background-color:#e6e6e6">
+	  <tr>
+		<th align="center">名称</th>
+		<th align="center">默认值</th>
+		<th align="center">描述</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+		<td id="au" align="center">autoplay</td>
+		<td align="center">false</td>
+		<td align="center">视频自动播放 , values: 1 , 0</td>
+		<script>
+		  var i1 = 0 //通过按钮点击次数的奇偶性判断是否改变颜色 参考:https://wenwen.sogou.com/z/q660577489.htm
+		  function auplay() {
+			var outarea = document.getElementById("outputarea")
+			if (i1++ % 2 == 0) { //按下按钮改变颜色 注意这里的背景颜色写作backgroundColor 如果写作"background-color"会报错为这个函数没有定义
+			  document.getElementById("autoplay").style.backgroundColor = "#ffc0cb"
+			  outarea.append("&autoplay=1")
+			} else {
+			  document.getElementById("autoplay").style.backgroundColor = "#ffffff"
+			  outarea.innerHTML = outarea.innerHTML.replace("&amp;autoplay=1",
+				"") //"&"的转义字符是"&amp;" https://zhidao.baidu.com/question/437801313.html
+			}
+		  }
+		</script>
+		<td>
+		  <form><input type="button" onclick="auplay()" value="启用自动播放" id="autoplay" style="background-color:#ffffff;">
+		  </form>
+		</td>
+	  </tr>
+	  <tr style="background-color:#e6e6e6">
+		<td align="center" id="danmu">danmaku</td>
+		<td align="center">等待更新</td>
+		<td align="center"></td>
+	  </tr>
+	  <tr>
+		<td align="center">lang</td>
+		<td align="center">navigator.language</td>
+		<td align="center">values: zh-cn , zh-tw , en</td>
+
+		<td>
+		  <div style="background-color:#ffffff" class="langschange">
+			<button>简中</button>
+			<!--这里必须用<button>.. 不能用<form><input type="button">.. -->
+			<button>繁中</button>
+			<button>Eng</button>
+		  </div>
+		</td>
+
+		<script type="text/javascript">
+		  $(".langschange button").click(
+			function () { //按钮单击变色 其他恢复 参考：https://blog.csdn.net/jiezhang656/article/details/101393402
+			  if (this.style.backgroundColor != "rgb(46, 175, 187)") { //通过颜色判断按钮是否是第一次点击 然后再改变颜色 此RGB颜色即为#2eafbb
+				$(".langschange button").eq($(this).index()).css('background', '#2eafbb').siblings().css('background',
+				  '#ffffff');
+				var outarea = document.getElementById("outputarea") //这里的声明变量要在函数内声明 否则会报错
+				if ($(this).index() == 0) { //index()用来判断点击的是哪个按钮
+				  outarea.append("&lang=zh-cn")
+				  outarea.innerHTML = outarea.innerHTML.replace("&amp;lang=zh-tw", "").replace("&amp;lang=en", "")
+					.replace("&amp;lang=zh-cn", "&amp;lang=zh-cn")
+				} else if ($(this).index() == 1) {
+				  outarea.append("&lang=zh-tw")
+				  outarea.innerHTML = outarea.innerHTML.replace("&amp;lang=zh-tw", "&amp;lang=zh-tw").replace(
+					"&amp;lang=en", "").replace("&amp;lang=zh-cn", "")
+				} else {
+				  outarea.append("&lang=en")
+				  outarea.innerHTML = outarea.innerHTML.replace("&amp;lang=zh-tw", "").replace("&amp;lang=en",
+					"&amp;lang=en").replace("&amp;lang=zh-cn", "")
+				}
+			  }
+			})
+		</script>
+	  </tr>
+	  <tr style="background-color:#e6e6e6">
+		<td align="center">live</td>
+		<td align="center">false</td>
+		<td align="center">启用直播模式 , values: 1 , 0. 请参阅 <a href="https://dplayer.js.org/guide.html#live"
+			rel="nofollow">#live</a></td>
+		<script>
+		  var i2 = 0
+		  function liveplay() {
+			var outarea = document.getElementById("outputarea")
+
+			if (i2++ % 2 == 0) {
+			  document.getElementById("liplay").style.backgroundColor = "#ffc0cb"
+			  outarea.append("&live=1")
+			} else {
+			  document.getElementById("liplay").style.backgroundColor = "#ffffff"
+			  outarea.innerHTML = outarea.innerHTML.replace("&amp;live=1", "")
+			}
+		  }
+		</script>
+		<td style="background-color:#ffffff">
+		  <form><input type="button" onclick="liveplay()" value="启用直播" id="liplay" style="background-color:#ffffff;">
+		  </form>
+		</td>
+	  </tr>
+	  <tr>
+		<td align="center">magurl</td>
+		<td align="center">[Base64EncodedMagurl]</td>
+		<td align="center">您可以直接输入磁力链 我们会自动帮您转化成Base64编码后的链接</a></td>
+
+
+	  </tr>
+	  <tr style="background-color:#e6e6e6">
+		<td align="center">picurl</td>
+		<td align="center">[default picurl][picurl]</td>
+		<td align="center">视频封面的链接</td>
+	  </tr>
+	  <tr>
+		<td align="center">playerlogo</td>
+		<td align="center">'assets/Cloud_Play_128px.png'</td>
+		<td align="center">DPlayer左上角图标的链接</td>
+	  </tr>
+	  <tr style="background-color:#e6e6e6">
+		<td align="center">preload</td>
+		<td align="center">'auto'</td>
+		<td align="center">values: none , metadata , auto(等待更新)</td>
+
+		<td>
+		  <div style="background-color: #ffffff" class="ploads">
+			<button>none</button>
+			<button>metadata</button>
+		  </div>
+		</td>
+
+		<script type="text/javascript">
+		  $(".ploads button").click(function () {
+			if (this.style.backgroundColor != "rgb(46, 175, 187)") {
+			  $(".ploads button").eq($(this).index()).css('background', '#2eafbb').siblings().css('background',
+				'#ffffff');
+			  var outarea = document.getElementById("outputarea")
+
+			  if ($(this).index() == 0) {
+				outarea.append("&preload=none")
+				outarea.innerHTML = outarea.innerHTML.replace("&amp;preload=none", "&amp;preload=none").replace(
+				  "&amp;preload=metadata", "")
+			  } else {
+				outarea.append("&preload=metadata")
+				outarea.innerHTML = outarea.innerHTML.replace("&amp;preload=none", "").replace(
+				  "&amp;preload=metadata", "&amp;preload=metadata")
+			  }
+			}
+		  })
+		</script>
+
+	  </tr>
+	  <tr>
+		<td align="center">suburl</td>
+		<td align="center">'assets/demoSubtitle_*.vtt'</td>
+		<td align="center">external subtitle url (format webvtt only)</td>
+	  </tr>
+	  <tr style="background-color:#e6e6e6">
+		<td align="center">thumburl</td>
+		<td align="center">-</td>
+		<td align="center">由<a href="https://github.com/MoePlayer/DPlayer-thumbnails">DPlayer缩略图</a>生成的视频缩略图</td>
+	  </tr>
+	  <tr>
+		<td align="center">vidqs</td>
+		<td align="center">等待更新</td>
+		<td align="center"></td>
+	  </tr>
+	  <tr style="background-color:#e6e6e6">
+		<td align="center">vidtype</td>
+		<td align="center">'auto'</td>
+		<td align="center">values: auto , hls , flv , dash , normal ,webtorrent</td>
+
+		<td>
+		  <div style="background-color: #ffffff" class="videotypes">
+			<button>hls</button>
+			<button>flv</button>
+			<button>dash</button>
+			<button>normal</button>
+			<button id="webtor">webtorrent</button>
+			<button>取消</button></div>
+		</td>
+
+		<script type="text/javascript">
+		  function replacevtypes(t1) {
+			var i3 = 0
+			var outarea = document.getElementById("outputarea")
+			var thevidtypes = ["&amp;vidtype=hls", "&amp;vidtype=flv", "&amp;vidtype=dash", "&amp;vidtype=normal",
+			  "&amp;vidtype=webtorrent"
+			]
+			var thevidtypes1 = ["&vidtype=hls", "&vidtype=flv", "&vidtype=dash", "&vidtype=normal",
+			  "&vidtype=webtorrent"
+			]
+
+			outarea.append(thevidtypes1[t1])
+			for (i3 = 0; i3 < thevidtypes.length; i3++) { //遍历 效果同<.. class="ploads">
+			  if (i3 == t1) {
+				outarea.innerHTML = outarea.innerHTML.replace(thevidtypes[i3], thevidtypes[i3])
+			  } else {
+				outarea.innerHTML = outarea.innerHTML.replace(thevidtypes[i3], "")
+			  }
+			}
+		  }
+
+		  $(".videotypes button").click(function () {
+			if (this.style.backgroundColor != "rgb(46, 175, 187)") {
+			  $(".videotypes button").eq($(this).index()).css('background', '#2eafbb').siblings().css('background',
+				'#ffffff');
+			  var i4 = 0
+			  var outarea = document.getElementById("outputarea")
+			  var thevidtypes = ["&amp;vidtype=hls", "&amp;vidtype=flv", "&amp;vidtype=dash", "&amp;vidtype=normal",
+				"&amp;vidtype=webtorrent"
+			  ]
+
+			  if ($(this).index() == 5) { //判断是否点击了取消按钮
+				$(".videotypes button").css('background', '#ffffff')
+				for (var i4 = 0; i4 < thevidtypes.length; i4++) { //column56 曾经将";"写成"," 会报错"Uncaught SyntaxError: Unexpected token ')'"
+				  outarea.innerHTML = outarea.innerHTML.replace(thevidtypes[i4], "")
+				}
+			  } else {
+				for (var i4 = 0; i4 < thevidtypes.length; i4++) {
+				  if (i4 == $(this).index()) {
+					replacevtypes(i4)
+				  }}
+			  }
+			}})
+		</script>
+
+	  </tr>
+	  <tr>
+		<td align="center" style="font-weight:700">vidurl</td>
+		<td align="center">[default video url][videourl]</td>
+		<td align="center">视频链接</td>
+
+	  </tr>
+	  <tr style="background-color:#e6e6e6">
+		<td align="center">webicon</td>
+		<td align="center">'assets/Cloud_Play.svg'</td>
+		<td align="center">网页图标链接(等待更新)</td>
+	  </tr>
+	  <tr>
+		<td align="center">webtitle</td>
+		<td align="center">'DPlayer'</td>
+		<td align="center">网页标题</td>
+	  </tr>
+	</tbody>
+  </table>
+  
+  <br>
+  <div align="center" >
+	<button id="toinputurl">点我输入URL</button>
+	<button id="toinputmag">点我输入磁力链</button>
+  </div>
+  <div align="center">    
+	<input type="text" id="urlinput" placeholder="请在此处输入URL" style="height: 28px;width: 500px;display: none;">
+	<input type="text" id="maginput" placeholder="请在此处输入磁力链" style="height: 28px;width: 500px;display: none;">
+    <div id="indatas"></div><!--用于存储url和magurl-->
+    <div id="indatas1"></div> <!--用于存储除了url和magurl以外的内容-->
+  </div>
+    
+	<script type="text/javascript"> //显示文本输入框并隐藏按钮
+ 	 var butinputurl = document.getElementById("toinputurl")
+ 	 var butinputmag = document.getElementById("toinputmag")
+
+ 	 butinputurl.onclick = function(){
+ 	 	butinputmag.style.display = "none"
+ 	 	butinputurl.style.display = "none"
+ 	 	document.getElementById('urlinput').style.display = "inline"
+ 	 	document.getElementById('urlinput').required = "required"
+ 	 }
+ 	 butinputmag.onclick = function(){
+  		butinputurl.style.display = "none"
+ 	 	butinputmag.style.display = "none"
+ 	 	document.getElementById('maginput').style.display = "inline"
+  	}
+	</script>
+
+	<script type="text/javascript">
+	var uinput = document.getElementById("urlinput")
+	var minput = document.getElementById("maginput")
+	
+	uinput.onfocus = function(){
+		$("#indatas1").data("pastdata1",document.getElementById("outputarea").innerHTML.replace(("&amp;vidurl=" + $("#indatas").data("pastdata")),"")) //储存除了url和magurl的信息
+	}
+    
+    minput.onfocus = function(){
+    	$("#indatas1").data("pastdata1",document.getElementById("outputarea").innerHTML.replace(("&amp;magurl=" + $("#indatas").data("pastdata")),""))//&的转义字符&amp;
+    }
+
+	uinput.oninput = function(){
+		var outarea = document.getElementById("outputarea")
+		$("#indatas").data("pastdata",uinput.value) //存储这一次输入进uinput的信息
+		outarea.innerHTML = $("#indatas1").data("pastdata1") + "&vidurl=" + uinput.value
+	}
+
+	minput.oninput = function(){
+		var outarea = document.getElementById("outputarea")
+        //$(".videotypes button").eq($("#webtor").index()).css('background', '#2eafbb').siblings().css('background','#ffffff').attr("disabled",true) //取消禁用只需$().removaAttr("disabled")
+		$("#indatas").data("pastdata",base64Encoder(minput.value)) 
+		outarea.innerHTML = $("#indatas1").data("pastdata1") + "&magurl=" + base64Encoder(minput.value)
+	}
+
+	</script>
+
+
+  <br>
+  <div align="center"><button id="urlgenerate">生成网址</button></div>
+  <br>
+  <div class="OutputArea" align="center" id="OutputAreaId" style="display: none;">
+	<div class="title">下面的文本框中会生成网址</div>
+	<textarea id="outputarea" style="width:814px;height:128px;padding:5px">https://dplayer.mochanbw.cn/?</textarea>
+  </div>
+
+  <script type="text/javascript">
+    document.getElementById("urlgenerate").onclick = function(){
+    	var outarea = document.getElementById("outputarea")
+  		document.getElementById('OutputAreaId').style.display = "block"
+  		document.getElementById('jump').style.display = "block"
+  		outarea.innerHTML = outarea.innerHTML.replace("&","").replace("amp;","")
+  	}</script>
+
+
+  <div align="center" style="display: none;" id="jump">
+	<button id="rushB">跳转这个网址</button>
+	<script>
+	  document.getElementById("rushB").onclick = function(){
+		window.open(document.getElementById("outputarea").value)
+	  }
+	</script>
+  </div>
+  <br>
+  <div style="position: relative; width: 30%; height: auto; padding-bottom: 57%;margin:auto;">
+	<iframe id="demoplayer" src="https://dplayer.mochanbw.cn/" scrolling="no" allowfullscreen="true"
+	  style="position: absolute; width: 100%; height: 100%;margin:0;padding:0;border:0;"></iframe>
+  </div>
+  
+
+</body>
+
+</html>
