@@ -13,3 +13,4 @@ document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/movie.html\">�
 document.write("			<li>");
 document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/app.html\">软件专区<\/a><\/li>");
 document.write("	<\/div>");
+document.write("	<br>");

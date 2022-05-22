@@ -15,4 +15,4 @@ document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/app.html\">软
 document.write("			<li class=\"nav\">");
 document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/r18\/\">R18专区<\/a><\/li>");
 document.write("	<\/div>");
-document.write("");
+document.write("	<br>");
