@@ -3,5 +3,3 @@ QQ：2633074007/206741451<br>
 QQ群：750813427<br>
 <img alt="GitHub repo file count" src="https://img.shields.io/github/languages/code-size/MUSESTAR-Cloud/musestar-cloud.github.io">
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/MUSESTAR-Cloud/musestar-cloud.github.io">
-<img alt="GitHub .Net Framework" src="https://img.shields.io/badge/.Net%20Framework-4.7.2-orange">
-<img alt="GitHub repo license" src="https://img.shields.io/github/license/MUSESTAR-Cloud/musestar-cloud.github.io?color=yellow">
