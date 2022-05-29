@@ -1,7 +1,7 @@
 document.write(" <div class=\"blank\"><\/div>");
 document.write("        <div class=\"botit\">");
 document.write("          <h2>温馨提示<\/h2><\/div>");
-document.write("        <div class=\"info\"><font size=\"10\" color=\"red\">请不要相信视频内的任何广告<\/font><\/div>");
+document.write("        <div class=\"info\"><font size=\"5\" color=\"red\">请不要相信视频内的任何广告<\/font><\/div>");
 document.write("        <div class=\"info\">如遇卡顿可尝试向后时移1-3秒<\/div>");
 document.write("        <div class=\"info\">部分浏览器需手动开始播放视频<\/div>");
 document.write("      <\/div>");
