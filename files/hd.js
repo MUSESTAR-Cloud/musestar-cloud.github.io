@@ -1,0 +1,1 @@
+document.write("<a href=\"https:\/\/baike.baidu.com\/item\/%E7%AB%AF%E5%8D%88%E8%8A%82\/1054?from=musestar\"><img src=\"https:\/\/musestar-cloud.github.io\/files\/hd.jpg\" width='325' height=\"auto\" \/><\/a>");
