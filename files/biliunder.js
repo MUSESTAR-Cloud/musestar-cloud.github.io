@@ -5,7 +5,7 @@ document.write("<a>© 2022 Bilibili<\/a>");
 document.write("              <br>");
 document.write("           <a href=\" https:\/\/musestar-cloud.gitHub.io\">Copyright © 2014-2022 MUSESTAR All Rights Reserved<\/a>");
 document.write("		<br>");
-document.write("<a href=\"https:\/\/icp.gov.moe\/?keyword=20220574\" target=\"_blank\">萌ICP备20220574号<\/a>");
+document.write("<a href=\"https:\/\/musestar-cloud.github.io\/icp.html\" target=\"_blank\">萌ICP备20220574号<\/a>");
 document.write("		<br>");
 document.write("<a href=\"https:\/\/musestar-cloud.github.io\/pay.html\" target=\"_blank\">发电赞助<\/a>");
 document.write("		<br>");
