@@ -1,7 +1,7 @@
 document.write("    <div class=\"side r\">");
 document.write("    <div class=\"firs l\">");
 document.write("    <div class=\"dtit\">");
-document.write("        <h2>共收到71.9元<u><a href=\"https:\/\/musestar-cloud.github.io\/pay.html\" target=\"_blank\">发电赞助<\/a><\/u><\/h2>");
+document.write("        <h2>共收到71.4元<u><a href=\"https:\/\/musestar-cloud.github.io\/pay.html\" target=\"_blank\">发电赞助<\/a><\/u><\/h2>");
 document.write("    <\/div>");
 document.write("    <\/div>");
 document.write("	<div class=\"tlist\">");
