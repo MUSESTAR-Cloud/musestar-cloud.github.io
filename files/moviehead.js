@@ -22,5 +22,8 @@ document.write("			<\/li>");
 document.write("			<li>");
 document.write("<a href=\"https:\/\/jq.qq.com\/?_wv=1027&k=4A08XieB\" target=\"_blank\">缪斯星官方QQ群：750813427<\/a>");
 document.write("			<\/li>");
+document.write("			<li>");
+document.write("<a href=\"https:\/\/musestar-cloud.github.io\/FAQ.html\" target=\"_blank\">投稿反馈<\/a>");
+document.write("			<\/li>");
 document.write("    <\/div>");
 document.write("	<br>");
