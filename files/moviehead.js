@@ -16,10 +16,10 @@ document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/app.html\">缪
 document.write("    <\/ul>");
 document.write("<ul class=\"dme r\">");
 document.write("			<li>");
-document.write("<a href=\"https:\/\/musestar-cloud.github.io\/pay.html\" target=\"_blank\">发电赞助<\/a>");
+document.write("<a href=\"https:\/\/musestar-cloud.github.io\/FAQ.html\" target=\"_blank\">投稿反馈<\/a>");
 document.write("			<\/li>");
 document.write("			<li>");
-document.write("<a href=\"https:\/\/musestar-cloud.github.io\/FAQ.html\" target=\"_blank\">投稿反馈<\/a>");
+document.write("<a href=\"https:\/\/musestar-cloud.github.io\/pay.html\" target=\"_blank\">发电赞助<\/a>");
 document.write("			<\/li>");
 document.write("			<li>");
 document.write("<a href=\"https:\/\/jq.qq.com\/?_wv=1027&k=4A08XieB\" target=\"_blank\">缪斯星官方QQ群<\/a>");
