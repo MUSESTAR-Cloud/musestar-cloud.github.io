@@ -1,1 +1,1 @@
-document.write("<p>第一季未上映：共*集<\/p>");
+document.write("<p>第一季未上映：共0集<\/p>");
