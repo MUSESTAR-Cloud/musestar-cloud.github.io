@@ -69,36 +69,10 @@
         <body><style> body{cursor:url('https://musestar-cloud.github.io/files/sbzz.png'),auto;}</style><style> body{cursor:url('https://musestar-cloud.github.io/files/sbzz.png'),auto;}</style><script src="https://musestar-cloud.github.io/files/sbtx.js"></script>
     <script type="text/javascript" src="https://musestar-cloud.github.io/files/moviehead.js"></script>
     <script type="text/javascript" src="https://musestar-cloud.github.io/files/search.js"></script>
-        <div>  
-	<video id="video" width='auto' height="400" controls autoplay></video>
-        </div>  
-    </body>  
-  <script type="text/javascript">
-	//播放地址
-	var hlsUrl="https://v7.dious.cc/20220608/5i1cUpM5/1500kb/hls/index.m3u8";//需要替换为自己的视频流地址
 
-	//播放视频流 
-        function loadVideo(){
-	var video = document.getElementById('video');//获取 video 标签
-	if(Hls.isSupported()) {
-	var hls = new Hls();//实三体化 Hls 对象
-	hls.loadSource(hlsUrl);//传入路径
-	hls.attachMedia(video);
-	hls.on(Hls.Events.MANIFEST_PARSED,function() {
-		   video.play();//调用播放 API
-		});
-	} else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-	          video.src = hlsUrl;
-	          video.addEventListener('loadedmetadata',function() {
-	              video.play();
-	          });
-	      }
-    }
-		
-  //方法调用
-  loadVideo();
-  </script>
-<p>缪斯星影视（网站持续完善中）</p>
+    <iframe src="//player.bilibili.com/player.html?aid=427749889&bvid=BV1t3411u7iM&cid=752105542&page=1&high_quality=1" width='750' height="500" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+    <p>缪斯星影视（网站持续完善中）</p>
 <p><a href="https://musestar-cloud.github.io/teleplay/3body.html">三体</a>-第一集</p>
 <p>第一季未上映：共24集</p>
 <script type="text/javascript" src="https://MUSESTAR-Cloud.github.io/files/hd.js"></script>
