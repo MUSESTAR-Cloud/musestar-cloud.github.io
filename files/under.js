@@ -1,3 +1,6 @@
+document.write("<br>");
+document.write("    <div class=\"foot\">");
+document.write("        <div class=\"footbg\">");
 document.write("           <p><a href=\" https:\/\/musestar-cloud.gitHub.io\">Copyright © 2014-2022 MUSESTAR All Rights Reserved<\/a><\/p>");
 document.write("<a href=\"https:\/\/musestar-cloud.github.io\/icp.html\" target=\"_blank\">萌ICP备20220574号<\/a><br>");
 document.write("<a href=\"https:\/\/musestar-cloud.github.io\/FAQ.html\" target=\"_blank\">投稿反馈<\/a>");

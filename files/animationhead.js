@@ -12,7 +12,6 @@ document.write("			<li>");
 document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/movie.html\">缪斯星影视<\/a><\/li>");
 document.write("			<li>");
 document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/app.html\">缪斯星软件<\/a><\/li>");
-
 document.write("    <\/ul>");
 document.write("<ul class=\"dme r\">");
 document.write("			<li>");
