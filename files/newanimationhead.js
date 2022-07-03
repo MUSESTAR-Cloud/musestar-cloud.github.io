@@ -1,0 +1,14 @@
+document.write("	        <ul class=\"top_nav clearfix\">");
+document.write("	        	                <li><a href=\"https:\/\/musestar-cloud.github.io\/\">首页<\/a><\/li>");
+document.write("		                        <li><a href=\"https:\/\/musestar-cloud.github.io\/muse.html\">缪斯星专区<\/a><\/li>");
+document.write("                				<li class=\"active\"><a href=\"https:\/\/musestar-cloud.github.io\/animation.html\" target=\"_blank\">缪斯星动漫<\/a><\/li>");
+document.write("								<li><a href=\"https:\/\/musestar-cloud.github.io\/movie.html\" target=\"_blank\">缪斯星影视<\/a><\/li>");
+document.write("								<li><a href=\"https:\/\/musestar-cloud.github.io\/app.html\" target=\"_blank\">缪斯星软件<\/a><\/li>");
+document.write("			<\/ul>");
+document.write("		<\/div>");
+document.write("		<div class=\"head_user\">");
+document.write("		    <ul>");
+document.write("				<li><a href=\"https:\/\/musestar-cloud.github.io\/FAQ.html\" target=\"_blank\"><font size=\"1\">投稿反馈<\/font><\/a><\/li>");
+document.write("				<li><a href=\"https:\/\/musestar-cloud.github.io\/pay.html\" target=\"_blank\"><font size=\"1\">发电赞助<\/font><\/a><\/li>");
+document.write("				<li><a href=\"https:\/\/jq.qq.com\/?_wv=1027&k=4A08XieB\" target=\"_blank\"><font size=\"1\">缪斯星官方QQ群<\/font><\/a><\/li>");
+document.write("                            <\/ul>");
