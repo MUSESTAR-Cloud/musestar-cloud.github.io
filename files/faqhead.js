@@ -14,7 +14,7 @@ document.write("			<li>");
 document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/muse.html\">缪斯星专区<\/a><\/li>");
 document.write("    <\/ul>");
 document.write("<ul class=\"dme r\">");
-document.write("			<li>");
+document.write("			<li class=\"nav\">");
 document.write("<a href=\"https:\/\/musestar-cloud.github.io\/FAQ.html\" target=\"_blank\">投稿反馈<\/a>");
 document.write("			<\/li>");
 document.write("			<li>");
