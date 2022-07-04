@@ -5,14 +5,13 @@ document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/\"><img src=\"
 document.write("			<li>");
 document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/\">首页<\/a><\/li>");
 document.write("			<li>");
-document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/muse.html\">缪斯星专区<\/a><\/li>");
-document.write("			<li>");
 document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/animation.html\">缪斯星动漫<\/a><\/li>");
 document.write("			<li class=\"nav\">");
 document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/movie.html\">缪斯星影视<\/a><\/li>");
 document.write("			<li>");
 document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/app.html\">缪斯星软件<\/a><\/li>");
-
+document.write("			<li>");
+document.write("				<a href=\"https:\/\/musestar-cloud.github.io\/muse.html\">缪斯星专区<\/a><\/li>");
 document.write("    <\/ul>");
 document.write("<ul class=\"dme r\">");
 document.write("			<li>");

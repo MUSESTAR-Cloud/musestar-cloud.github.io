@@ -1,9 +1,9 @@
 document.write("	        <ul class=\"top_nav clearfix\">");
 document.write("	        	                <li><a href=\"https:\/\/musestar-cloud.github.io\/\">首页<\/a><\/li>");
-document.write("		                        <li><a href=\"https:\/\/musestar-cloud.github.io\/muse.html\">缪斯星专区<\/a><\/li>");
 document.write("                				<li class=\"active\"><a href=\"https:\/\/musestar-cloud.github.io\/animation.html\" target=\"_blank\">缪斯星动漫<\/a><\/li>");
 document.write("								<li><a href=\"https:\/\/musestar-cloud.github.io\/movie.html\" target=\"_blank\">缪斯星影视<\/a><\/li>");
 document.write("								<li><a href=\"https:\/\/musestar-cloud.github.io\/app.html\" target=\"_blank\">缪斯星软件<\/a><\/li>");
+document.write("		                        <li><a href=\"https:\/\/musestar-cloud.github.io\/muse.html\">缪斯星专区<\/a><\/li>");
 document.write("			<\/ul>");
 document.write("		<\/div>");
 document.write("		<div class=\"head_user\">");
