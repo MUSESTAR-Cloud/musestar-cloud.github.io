@@ -1,1 +1,1 @@
-document.write("第一季未上映：共0集");
+document.write("第一季更新中：共1集");
